@@ -9,6 +9,12 @@ module.exports = {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
                 digit: ["Rajdhani", ...defaultTheme.fontFamily.sans]
             },
+            width: {
+                panel: "30rem"
+            },
+            height: {
+                panel: "32rem"
+            }
         },
     },
     variants: {
