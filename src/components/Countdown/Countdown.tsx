@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import DoubleDigits from './DoubleDigits';
 
-type ClockProps = {
+type CountdownProps = {
     startFrom?: {
         minutes: number;
         seconds: number;
@@ -11,7 +11,7 @@ type ClockProps = {
     onFinish?(): void;
 };
 
-const Clock: React.FC<ClockProps> = ({ startFrom, className }) => {
+const Countdown: React.FC<CountdownProps> = ({ startFrom, className }) => {
     const { minutes: startMinutes, seconds: startSeconds } = startFrom;
 
     const [minutes, setMinutes] = useState(startMinutes);
@@ -26,4 +26,4 @@ const Clock: React.FC<ClockProps> = ({ startFrom, className }) => {
     );
 };
 
-export default Clock;
+export default Countdown;
