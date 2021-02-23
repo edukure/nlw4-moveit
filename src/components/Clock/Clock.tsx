@@ -18,9 +18,9 @@ const Clock: React.FC<ClockProps> = ({ startFrom, className }) => {
     const [seconds, setSeconds] = useState(startSeconds);
 
     return (
-        <div className={`flex w-full font-semibold text-9xl font-digit ${className}`}>
+        <div className={`flex w-full h-36 font-semibold text-9xl font-digit ${className}`}>
             <DoubleDigits>{minutes}</DoubleDigits>
-            <span className="h-full flex justify-center items-center ">:</span>
+            :
             <DoubleDigits>{seconds}</DoubleDigits>
         </div>
     );
