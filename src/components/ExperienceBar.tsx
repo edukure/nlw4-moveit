@@ -1,9 +1,9 @@
-type ExperiencebarProps = {
-    currentExp: number;
-    maxExp: number;
-};
+import { useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 
-const ExperienceBar: React.FC<ExperiencebarProps> = ({ currentExp, maxExp }) => {
+const ExperienceBar = () => {
+    const { currentExp, maxExp } = useContext(ChallengesContext);
+
     const percentage = Math.floor((currentExp / maxExp) * 100);
 
     return (

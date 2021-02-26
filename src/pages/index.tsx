@@ -1,12 +1,27 @@
+import Avatar from '../components/Avatar';
+import Countdown from '../components/Countdown';
+import CompletedChallenges from '../components/CompletedChallenges';
+import ExperienceBar from '../components/ExperienceBar';
+import ChallengeCard from '../components/ChallengeCard';
 
-import ExperienceBar from "../components/ExperienceBar";
+import { CountdownProvider } from '../contexts/CountdownContext';
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center">
-      <h1>Hello World</h1>
+    return (
+            <div className="min-h-screen w-full flex flex-col items-center bg-gray-100 py-10">
+                <ExperienceBar />
 
-      <ExperienceBar currentExp={200} maxExp={1000} />
-    </div>
-  );
+                <CountdownProvider>
+                    <div className="mt-32 object-center lg:grid lg:grid-cols-2 lg:gap-6">
+                        <div className="w-panel h-panel flex flex-col justify-between mb-12 lg:mb-0">
+                            <Avatar />
+                            <CompletedChallenges />
+                            <Countdown />
+                        </div>
+
+                        <ChallengeCard />
+                    </div>
+                </CountdownProvider>
+            </div>
+    );
 }
