@@ -14,7 +14,10 @@ module.exports = {
             },
             height: {
                 panel: "32rem"
-            }
+            },
+            backgroundImage: theme => ({
+                'level-up': "url('/icons/levelup.svg')",
+               })
         },
     },
     variants: {
